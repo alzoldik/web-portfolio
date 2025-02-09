@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aly's Portfolio | Flutter Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 <body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <div id="particles-js"></div>
+    
     <header>
         <nav>
             <div class="logo">Aly Mohammed</div>
@@ -18,7 +28,10 @@
                 <a href="#projects" class="nav-item">Projects</a>
                 <a href="#skills" class="nav-item">Skills</a>
                 <a href="#contact" class="nav-item">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </button>
             </div>
             <div class="menu-toggle">
                 <div class="bar"></div>
@@ -28,9 +41,11 @@
         </nav>
     </header>
     
-    <section id="hero" class="section-padding">
+    <section id="hero">
         <div class="hero-content">
-            <img src="assets/images/IMG_1431.jpeg" alt="Aly's Profile Picture" class="profile-img floating">
+            <div class="hero-image-container">
+                <img src="assets/images/IMG_1431.jpeg" alt="Aly's Profile Picture" class="profile-img">
+            </div>
             <h1 class="glitch-text">Hi, I'm Aly</h1>
             <p class="typewriter">Senior Flutter Developer</p>
             <div class="hero-cta">
@@ -45,107 +60,113 @@
     </section>
 
     <section id="about" class="section-padding">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>With over 5 years of experience in mobile development, I specialize in creating beautiful and performant Flutter applications. My passion lies in building scalable solutions that make a real impact.</p>
-                <p>I believe in clean code, pixel-perfect designs, and creating exceptional user experiences.</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">5+</span>
-                    <span class="stat-label">Years Experience</span>
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>With over 5 years of experience in mobile development, I specialize in creating beautiful and performant Flutter applications. My passion lies in building scalable solutions that make a real impact.</p>
+                    <p>I believe in clean code, pixel-perfect designs, and creating exceptional user experiences.</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">30+</span>
-                    <span class="stat-label">Happy Clients</span>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <section id="projects" class="section-padding">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="project-grid">
-            <article class="project-card">
-                <div class="project-image" style="background-image: url('project1.jpg')"></div>
-                <div class="project-content">
-                    <h3>E-Commerce App</h3>
-                    <p>A full-featured shopping app built with Flutter and Firebase</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Stripe</span>
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-image" style="background-image: url('project1.jpg')"></div>
+                    <div class="project-content">
+                        <h3>E-Commerce App</h3>
+                        <p>A full-featured shopping app built with Flutter and Firebase</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image" style="background-image: url('project2.jpg')"></div>
+                    <div class="project-content">
+                        <h3>Social Media Dashboard</h3>
+                        <p>Real-time analytics dashboard with dark mode support</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="project-image" style="background-image: url('project2.jpg')"></div>
-                <div class="project-content">
-                    <h3>Social Media Dashboard</h3>
-                    <p>Real-time analytics dashboard with dark mode support</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">GraphQL</span>
-                        <span class="tech-tag">AWS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
     </section>
     
     <section id="skills" class="section-padding">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Mobile Development</h3>
-                <div class="skill-list">
-                    <div class="skill-item" data-skill="Flutter">
-                        <i class="fab fa-flutter"></i>
-                        <span>Flutter</span>
-                        <div class="skill-level" style="width: 95%"></div>
-                    </div>
-                    <div class="skill-item" data-skill="Dart">
-                        <i class="fas fa-code"></i>
-                        <span>Dart</span>
-                        <div class="skill-level" style="width: 90%"></div>
-                    </div>
-                    <div class="skill-item" data-skill="React Native">
-                        <i class="fab fa-react"></i>
-                        <span>React Native</span>
-                        <div class="skill-level" style="width: 80%"></div>
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-skill="Flutter">
+                            <i class="fab fa-flutter"></i>
+                            <span>Flutter</span>
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                        <div class="skill-item" data-skill="Dart">
+                            <i class="fas fa-code"></i>
+                            <span>Dart</span>
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                        <div class="skill-item" data-skill="React Native">
+                            <i class="fab fa-react"></i>
+                            <span>React Native</span>
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3>Backend & Database</h3>
-                <div class="skill-list">
-                    <div class="skill-item" data-skill="Firebase">
-                        <i class="fas fa-fire"></i>
-                        <span>Firebase</span>
-                        <div class="skill-level" style="width: 85%"></div>
-                    </div>
-                    <div class="skill-item" data-skill="REST APIs">
-                        <i class="fas fa-network-wired"></i>
-                        <span>REST APIs</span>
-                        <div class="skill-level" style="width: 88%"></div>
-                    </div>
-                    <div class="skill-item" data-skill="SQL">
-                        <i class="fas fa-database"></i>
-                        <span>SQL</span>
-                        <div class="skill-level" style="width: 75%"></div>
+                <div class="skill-category">
+                    <h3>Backend & Database</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-skill="Firebase">
+                            <i class="fas fa-fire"></i>
+                            <span>Firebase</span>
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-item" data-skill="REST APIs">
+                            <i class="fas fa-network-wired"></i>
+                            <span>REST APIs</span>
+                            <div class="skill-level" style="width: 88%"></div>
+                        </div>
+                        <div class="skill-item" data-skill="SQL">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,52 +174,53 @@
     </section>
     
     <section id="contact" class="section-padding">
-        <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="#" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="#" target="_blank">GitHub Profile</a>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="#" target="_blank">LinkedIn Profile</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="#" target="_blank">GitHub Profile</a>
-                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <!-- <label for="name">Name</label> -->
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <!-- <label for="email">Email</label> -->
-                </div>
-                <div class="form-group">
-                    <textarea id="message" placeholder="Your Message" required></textarea>
-                    <!-- <label for="message">Message</label> -->
-                </div>
-                <button type="submit" class="submit-btn">
-                    <span>Send Message</span>
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-text">
-                <p>© 2025 Aly Mohammed. All rights reserved.</p>
-            </div>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p> 2025 Aly Mohammed. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
     </footer>
