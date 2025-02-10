@@ -3,226 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aly's Portfolio | Flutter Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Candelaria - Luxury Handcrafted Candles</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
-    <script defer src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="cursor"></div>
-    <div id="cursor-blur"></div>
-    <div id="particles-js"></div>
-    
     <header>
         <nav>
-            <div class="logo">Aly Mohammed</div>
+            <div class="logo">Candelaria</div>
             <div class="nav-links">
-                <a href="#hero" class="nav-item">Home</a>
-                <a href="#about" class="nav-item">About</a>
-                <a href="#projects" class="nav-item">Projects</a>
-                <a href="#skills" class="nav-item">Skills</a>
-                <a href="#contact" class="nav-item">Contact</a>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-sun light-icon"></i>
-                    <i class="fas fa-moon dark-icon"></i>
-                </button>
-            </div>
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+                <a href="#home">Home</a>
+                <a href="#featured">Featured</a>
+                <a href="#products">Products</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
         </nav>
     </header>
-    
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-image-container">
-                <img src="assets/images/IMG_1431.jpeg" alt="Aly's Profile Picture" class="profile-img">
-            </div>
-            <h1 class="glitch-text">Hi, I'm Aly</h1>
-            <p class="typewriter">Senior Flutter Developer</p>
-            <div class="hero-cta">
-                <a href="#contact" class="cta-button">Get in Touch</a>
-                <a href="#projects" class="cta-button secondary">View Work</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-            <p>Scroll to explore</p>
-        </div>
-    </section>
 
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Illuminate Your Space</h1>
+                <p class="tagline">Discover our collection of handcrafted luxury candles</p>
+                <div class="hero-features">
+                    <span><i class="fas fa-leaf"></i> 100% Natural Soy Wax</span>
+                    <span><i class="fas fa-heart"></i> Hand-Poured with Love</span>
+                    <span><i class="fas fa-globe"></i> Eco-Friendly</span>
+                </div>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-section">
+            <h2>Featured Collection</h2>
+            <div class="featured-banner">
+                <div class="banner-text">
+                    <h3>Limited Edition</h3>
+                    <h4>Valentine's Special Collection</h4>
+                    <p>Discover our romantic collection of rose-scented candles</p>
+                    <span class="special-offer">Special Offer: 20% OFF</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Collection</h2>
+            <div class="collection-intro">
+                <p>Each candle is carefully crafted to create the perfect ambiance for your space</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Bestseller</div>
+                    <img data-src="assets/images/candle1.jpeg" alt="Vanilla Rose Candle" loading="lazy">
+                    <h3>Vanilla Rose</h3>
+                    <p>A delicate blend of sweet vanilla and fresh rose petals</p>
+                    <div class="product-details">
+                        <span class="burn-time"><i class="far fa-clock"></i> 40-45 hours</span>
+                        <span class="weight"><i class="fas fa-weight-hanging"></i> 8 oz</span>
+                    </div>
+                    <span class="price">$24.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <img data-src="assets/images/candle2.jpeg" alt="Lavender Dreams Candle" loading="lazy">
+                    <h3>Lavender Dreams</h3>
+                    <p>Calming lavender with hints of chamomile</p>
+                    <div class="product-details">
+                        <span class="burn-time"><i class="far fa-clock"></i> 35-40 hours</span>
+                        <span class="weight"><i class="fas fa-weight-hanging"></i> 8 oz</span>
+                    </div>
+                    <span class="price">$29.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img data-src="assets/images/candle3.jpeg" alt="Cherry Blossom Candle" loading="lazy">
+                    <h3>Cherry Blossom</h3>
+                    <p>Sweet and floral scent of spring cherry blossoms</p>
+                    <div class="product-details">
+                        <span class="burn-time"><i class="far fa-clock"></i> 30-35 hours</span>
+                        <span class="weight"><i class="fas fa-weight-hanging"></i> 8 oz</span>
+                    </div>
+                    <span class="price">$27.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="benefits-section">
+            <h2>Why Choose Candelaria?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Natural Ingredients</h3>
+                    <p>Made with 100% natural soy wax and essential oils</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Handcrafted</h3>
+                    <p>Each candle is hand-poured with attention to detail</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable packaging and recyclable materials</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Long-Lasting</h3>
+                    <p>30-45 hours of beautiful fragrance</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Candelaria</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>With over 5 years of experience in mobile development, I specialize in creating beautiful and performant Flutter applications. My passion lies in building scalable solutions that make a real impact.</p>
-                    <p>I believe in clean code, pixel-perfect designs, and creating exceptional user experiences.</p>
+                    <p class="highlight">Crafting moments of serenity, one candle at a time.</p>
+                    <p>At Candelaria, we believe in the power of ambiance. Our journey began with a simple passion: creating perfect moments through the art of candlemaking. Each candle is thoughtfully crafted using premium soy wax, pure essential oils, and cotton wicks, ensuring a clean, long-lasting burn.</p>
+                    <p>Our commitment to quality and sustainability means we source only the finest natural ingredients while minimizing our environmental impact. Every Candelaria candle is hand-poured in small batches, allowing us to maintain exceptional quality and attention to detail.</p>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Years Experience</span>
+                <div class="about-features">
+                    <div class="feature">
+                        <span class="feature-number">1000+</span>
+                        <span class="feature-text">Happy Customers</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Projects Completed</span>
+                    <div class="feature">
+                        <span class="feature-number">50+</span>
+                        <span class="feature-text">Unique Scents</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">Happy Clients</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-image" style="background-image: url('project1.jpg')"></div>
-                    <div class="project-content">
-                        <h3>E-Commerce App</h3>
-                        <p>A full-featured shopping app built with Flutter and Firebase</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Stripe</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-image" style="background-image: url('project2.jpg')"></div>
-                    <div class="project-content">
-                        <h3>Social Media Dashboard</h3>
-                        <p>Real-time analytics dashboard with dark mode support</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">GraphQL</span>
-                            <span class="tech-tag">AWS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Mobile Development</h3>
-                    <div class="skill-list">
-                        <div class="skill-item" data-skill="Flutter">
-                            <i class="fab fa-flutter"></i>
-                            <span>Flutter</span>
-                            <div class="skill-level" style="width: 95%"></div>
-                        </div>
-                        <div class="skill-item" data-skill="Dart">
-                            <i class="fas fa-code"></i>
-                            <span>Dart</span>
-                            <div class="skill-level" style="width: 90%"></div>
-                        </div>
-                        <div class="skill-item" data-skill="React Native">
-                            <i class="fab fa-react"></i>
-                            <span>React Native</span>
-                            <div class="skill-level" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend & Database</h3>
-                    <div class="skill-list">
-                        <div class="skill-item" data-skill="Firebase">
-                            <i class="fas fa-fire"></i>
-                            <span>Firebase</span>
-                            <div class="skill-level" style="width: 85%"></div>
-                        </div>
-                        <div class="skill-item" data-skill="REST APIs">
-                            <i class="fas fa-network-wired"></i>
-                            <span>REST APIs</span>
-                            <div class="skill-level" style="width: 88%"></div>
-                        </div>
-                        <div class="skill-item" data-skill="SQL">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                            <div class="skill-level" style="width: 75%"></div>
-                        </div>
+                    <div class="feature">
+                        <span class="feature-number">100%</span>
+                        <span class="feature-text">Natural Ingredients</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-container">
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Stay Connected</h2>
+            <div class="contact-content">
+                <div class="newsletter">
+                    <h3>Join Our Newsletter</h3>
+                    <p>Subscribe to receive updates, exclusive offers, and candle care tips!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:your.email@example.com">your.email@example.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="#" target="_blank">LinkedIn Profile</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="#" target="_blank">GitHub Profile</a>
-                    </div>
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-envelope"></i> hello@candelaria.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-location-dot"></i> New York, NY</p>
                 </div>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p> 2025 Aly Mohammed. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#products">Shop</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Candelaria. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
